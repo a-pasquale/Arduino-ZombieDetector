@@ -55,11 +55,18 @@ void loop() {
     digitalWrite(LEDPin, HIGH);
     digitalWrite(buzzerPin, HIGH);
     // It gets faster as the zombies get closer...
-    //delay(distance * 3);
-    delay(random(50,500));
+    delay(distance * 3);
     digitalWrite(LEDPin, LOW);
     digitalWrite(buzzerPin, LOW);
-    //delay(distance * 3);
-    delay(random(20,500));
+    delay(distance * 3);
+
+    /*
+       This also works nicely as a trick-or-treater detector
+       with the LED inside a pumpkin. You might want to try
+       delay(random(50, 500)) for a spooky effect.
+       Probably the buzzer isn't so useful for this unless
+       you have enough wire to bring it inside and alert you
+       for incoming visitors.
+    */
   }
 }
